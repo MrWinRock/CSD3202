@@ -13,7 +13,18 @@
     <hr>
 
     <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        if (!empty($username) && !empty($password)) {
+            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
+            echo "ชื่อผู้ใช้: $username <br>";
+            echo "รหัสผ่าน: $hashed_password <br>";
+        } else {
+            echo "กรุณากรอกข้อมูลให้ครบถ้วน";
+        }
+    }
     ?>
 </body>
 

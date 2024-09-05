@@ -8,18 +8,21 @@
 </head>
 
 <body>
-    <h3>ฟังก์ชันที่คำนวณพื้นที่ของสี่เหลี่ยมผืนผ้า </h3>
+    <h3>โปรแกรมที่ใช้ลูป for</h3>
     <h3>Name: ปฏิวัฒน์ กฤษฏิ์สุภารัตน์ ID: 65122250031</h3>
     <hr>
 
     <?php
-    function rectangleArea($width, $height)
-    {
-        return $width * $height;
-    }
+    try {
+        $sum = 0;
+        for ($i = 1; $i <= 100; $i++) {
+            $sum += $i;
+        }
 
-    $area = rectangleArea(5, 10);
-    echo "$area";
+        echo "<p>ผลรวม: $sum</p>";
+    } catch (Exception $e) {
+        echo $e->getMessage();
+    }
     ?>
 </body>
 

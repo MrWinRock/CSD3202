@@ -8,18 +8,21 @@
 </head>
 
 <body>
-    <h3>ฟังก์ชันที่คำนวณพื้นที่ของสี่เหลี่ยมผืนผ้า </h3>
+    <h3>โปรแกรมที่ใช้ลูป foreach </h3>
     <h3>Name: ปฏิวัฒน์ กฤษฏิ์สุภารัตน์ ID: 65122250031</h3>
     <hr>
 
     <?php
-    function rectangleArea($width, $height)
-    {
-        return $width * $height;
-    }
+    $numbers = array(897, 446, 38, 539, 891, 731, 278, 406, 175, 24);
 
-    $area = rectangleArea(5, 10);
-    echo "$area";
+    foreach ($numbers as $number) {
+        echo "$number: ";
+        if ($number % 2 == 0) {
+            echo "คู่<br>";
+        } else {
+            echo "คี่<br>";
+        }
+    }
     ?>
 </body>
 
